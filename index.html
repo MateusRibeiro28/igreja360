@@ -90,13 +90,14 @@
             justify-content: space-evenly; /* Distribui igualmente os itens de navegação */
             padding: 0;
             margin: 0;
+            gap: 130px; /* Aumenta o espaço horizontal entre os itens */
         }
 
         nav ul li {
             display: flex;
             align-items: center; /* Alinha as imagens e textos na mesma altura */
             justify-content: center; /* Alinha o conteúdo do item ao centro */
-            width: 100%; /* Faz os itens de navegação ocuparem o máximo de largura possível */
+            width: 130%; /* Faz os itens de navegação ocuparem o máximo de largura possível */
         }
 
         nav ul li a {
@@ -108,7 +109,7 @@
             display: flex;
             align-items: center;
             justify-content: center; /* Garante que os itens de menu fiquem no centro */
-            width: 100%; /* Ocupa a largura do espaço disponível no item */
+            width: 150%; /* Ocupa a largura do espaço disponível no item */
         }
 
         nav ul li a:hover {
@@ -119,7 +120,12 @@
             max-width: 30px; /* Ajuste o tamanho das imagens conforme necessário */
             height: auto;
             margin-right: 0px; /* Dá um pequeno espaço entre as imagens e o texto */
+            transition: filter 0.3s ease; /* Adiciona uma transição suave */
         }
+
+        nav ul li img:hover {
+            filter: sepia(80%); /* Adiciona um tom sépia */
+            }
 
 
         /* Seção Hero1 */
@@ -281,7 +287,7 @@
         margin: 30px auto;
         border-radius: 40px;
         width: calc(100% - 80px);
-        height: 720px; /* Adiciona uma altura fixa se necessário */
+        height: 620px; /* Adiciona uma altura fixa se necessário */
     }
 
     .section .text1 {
@@ -364,6 +370,20 @@
     max-width: 500px; /* Define uma largura máxima para o conteúdo */
 }
 
+#intensive .video-container {
+    position: absolute; /* Permite reposicionar o vídeo */
+    right: 100px; /* Move o vídeo mais para a direita */
+    bottom: 35px; /* Desce o vídeo mais para baixo */
+    width: 400px; /* Aumenta a largura do vídeo */
+    height: 240px; /* Ajusta a altura proporcionalmente */
+}
+
+#intensive iframe {
+    width: 100%; /* O vídeo ocupa 100% do container */
+    height: 100%;
+    border-radius: 20px; /* Bordas arredondadas para um acabamento mais bonito */
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -377,35 +397,28 @@
     align-items: center;
 }
 
-/* Estilo do conteúdo do modal */
-.modal-content {
-    position: relative;
-    background-color: #fff;
-    width: 90%; /* Ajustar a largura conforme o vídeo */
-    max-width: 1500px; /* Limite máximo para a largura */
-    border-radius: 10px;
-    padding: 10px;
-    box-sizing: border-box;
+
+#ccvNetwork {
+    position: relative; /* Permite o posicionamento absoluto dentro da seção */
 }
 
-/* Estilo do iframe (vídeo) */
-.modal-content iframe {
-    display: block;
-    margin: auto;
-    width: 100%; /* O iframe ocupa 100% da largura do modal */
-    height: 500px; /* Defina a altura desejada para o vídeo */
-    border-radius: 10px;
-}
-
-.close {
+.top-left-img {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #ffffff;
-    cursor: pointer;
+    top: 12px;
+    left: 45px;
+    max-width: 5px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
 }
+
+.top-right-img {
+    position: absolute;
+    top: 7px;
+    right: 45px;
+    max-width: 5px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+
 
     </style>
 </head>
@@ -414,8 +427,8 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#"><img src="images/360logo.png" alt="IGREJA360" style="max-width: 100%; height: auto;"></a></li>
-                <li><a href="#ccvNetwork"><img src="images/networklogo.png" alt="IGREJA360" style="max-width: 80%; height: auto;"></a></li>
+                <li><a href="#"><img src="images/360logo.png" alt="IGREJA360" style="max-width: 110%; height: auto;"></a></li>
+                <li><a href="#ccvNetwork"><img src="images/networklogo.png" alt="IGREJA360" style="max-width: 95%; height: auto;"></a></li>
                 <li><a href="#formacoes">Formações</a></li>
                 <li><a href="#intensive">Intensive</a></li>
                 <li><a href="#quemSomos">Quem Somos</a></li>
@@ -438,6 +451,8 @@
 
     <!-- Seções Gerais -->
     <section id="ccvNetwork" class="section">
+        <img src="images/ccvlog.png" alt="Imagem esquerda" class="top-left-img">
+        <img src="images/ccvlogo.png" alt="Imagem direita" class="top-right-img">
         <img src="images/2.png" alt="Pessoa gravando vídeo">
         <div class="text">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -460,31 +475,21 @@
     <section id="intensive" class="hero1">
         <div class="content">
             <h2>Torne-se um <strong>líder</strong> da próxima geração</h2>
-            <br>
+            <p>Um Curso 100% Online de <strong>Formação Ministerial</strong> focado em áreas essenciais.</p>
             <a href="https://hbcrtv.rds.land/intensive" target="_blank">
-                <button id="ignoreClick">Saiba mais</button>
-            </a>
-            <a href="https://hbcrtv.rds.land/intensive" target="_blank">
-                <button id="ignoreClick">→</button>
+                <button>Saiba mais</button>
             </a>
         </div>
-    </section>
-    
-    <!-- Modal para o vídeo -->
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
+        <div class="video-container">
+            <!-- Vídeo incorporado -->
             <iframe 
-                id="youtubeVideo" 
-                width="560" 
-                height="315" 
-                src="" 
+                src="https://www.youtube.com/embed/Z0HoZC5pnKM" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
         </div>
-    </div>
+    </section>
     
     
 
@@ -494,7 +499,7 @@
             <br>1. Teologia;
             <br>2. Lideranaça;
             <br>3. Desenvolvimento Pessoal; e
-            <br>4. Ensino Prático Sobre Ministério e Igreja Local.
+            <br>1. Ensino Prático Sobre Ministério e Igreja Local.
             </p>
         </div>
     </section>
@@ -506,41 +511,6 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-    </script>
-
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const intensiveSection = document.getElementById('intensive');
-    const videoModal = document.getElementById('videoModal');
-    const closeModal = document.querySelector('.close');
-    const youtubeVideo = document.getElementById('youtubeVideo');
-
-    const videoURL = "https://www.youtube.com/embed/Z0HoZC5pnKM?autoplay=1";
-
-    // Abre o modal ao clicar em qualquer canto, exceto nos botões
-    intensiveSection.addEventListener('click', function (e) {
-        if (!e.target.closest('button')) { // Se o clique NÃO for em um botão
-            videoModal.style.display = "flex";
-            youtubeVideo.src = videoURL;
-        }
-    });
-
-    // Fecha o modal e pausa o vídeo
-    closeModal.addEventListener('click', function () {
-        videoModal.style.display = "none";
-        youtubeVideo.src = ""; // Para o vídeo
-    });
-
-    // Fecha o modal se clicar fora dele
-    window.addEventListener('click', function (e) {
-        if (e.target === videoModal) {
-            videoModal.style.display = "none";
-            youtubeVideo.src = "";
-        }
-    });
-});
-
-
     </script>
 </body>
 </html>
