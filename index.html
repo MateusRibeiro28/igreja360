@@ -123,6 +123,21 @@
 
 
         /* Seção Hero1 */
+        .hero12 {
+            font-family: 'TestFounders';
+            font-size: 1rem;
+            font-weight: light;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e0e2e1;
+            padding: 40px;
+            margin: 30px auto;
+            border-radius: 40px;
+            width: calc(100% - 80px);
+            margin-top: -50px;
+        }
+
         .hero1 {
             display: flex;
             justify-content: space-between;
@@ -136,6 +151,10 @@
 
         .hero1 .content {
             max-width: 45%;
+        }
+
+        .hero1 .content1 {
+            max-width: 100%;
         }
 
         .hero1 h2 {
@@ -155,8 +174,8 @@
             font-family: 'TestFounders';
             font-size: 1.8rem;
             font-weight: light;
-            background-color: #c1c5c7;
-            color: #898989;
+            background-color: #737777;
+            color: #c1c5c7;
             border: none;
             border-radius: 50px;
             padding: 10px 20px;
@@ -198,7 +217,8 @@
             font-family: 'TestFounders';
             margin: 15px 0;
             font-size: 1.8rem;
-            font-weight: light;
+            font-weight: medium;
+            color: #898989;
         }
         
 
@@ -313,6 +333,28 @@
             margin-top: 15px;
         }
 
+                /* Section com imagem de fundo */
+                #intensive {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-image: url('images/intensive22.png'); /* Caminho da imagem */
+            background-size: cover; /* Preenche toda a área */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita repetição */
+            padding: 40px;
+            margin: 30px auto;
+            border-radius: 40px;
+            width: calc(100% - 80px);
+            height: 470px; /* Defina a altura desejada */
+        }
+
+        /* Exemplo de conteúdo interno */
+        .content {
+            color: #fff;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -364,11 +406,16 @@
     </section>
 
     <section id="intensive" class="hero1">
-        <img src="images/4.png" alt="Jovem inspirador">
         <div class="content">
             <h2>Torne-se um <STRONG>líder</STRONG> da próxima geração</h2>
+            <br>
+            <button>Saiba mais</button><button>→</button>
+        </div>
+    </section>
+
+    <section id="intensive1" class="hero12">
+        <div class="content1">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <button>Saiba mais →</button>
         </div>
     </section>
     
