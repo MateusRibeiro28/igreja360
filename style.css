@@ -1,0 +1,885 @@
+@font-face {
+    font-family: 'Bakemono';
+    src: url('fonts/Bakemono-Stereo-Bold-TRIAL.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Bakemono';
+    src: url('fonts/Bakemono-Stereo-Medium-TRIAL.ttf') format('truetype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Bakemono';
+    src: url('fonts/Bakemono-Stereo-Regular-TRIAL.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Bakemono';
+    src: url('fonts/Bakemono-Mono-Light-TRIAL.ttf') format('truetype');
+    font-weight: light;
+}
+
+@font-face {
+    font-family: 'Bakemono';
+    src: url('fonts/Bakemono-Stereo-Thin-TRIAL.ttf') format('truetype');
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: 'TestFounders';
+    src: url('fonts/FoundersGrotesk-Medium.otf') format('opentype');
+    font-weight: medium;
+}
+@font-face {
+    font-family: 'TestFounders';
+    src: url('fonts/FoundersGrotesk-Regular.otf') format('opentype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'TestFounders';
+    src: url('fonts/FoundersGrotesk-Light.otf') format('opentype');
+    font-weight: light;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bakemono', sans-serif;
+    background-image: url('images/background1.png');
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #e4e6e5;
+    opacity: 60%;
+    color: #6a6a6a;
+    display: flex;
+    justify-content: space-between; /* Distribui o conteúdo igualmente entre os itens */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 10px 40px; /* O padding de 40px garante espaço nas laterais */
+    width: calc(100% - 110px); /* Subtrai o padding das laterais */
+    margin: 30px auto;
+    border-radius: 10px;
+    position: fixed; /* Faz o cabeçalho ficar fixo na parte superior da página */
+    top: 15px; /* Alinha no topo da página */
+    left: 54px; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outras camadas */
+    margin: 0; /* Remove o margin padrão para o layout fixo */
+}
+
+
+header .logo img {
+    display: none;
+}
+
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    flex: 1; /* Faz com que o título ocupe o espaço disponível */
+    text-align: center; /* Garante que o texto esteja centralizado no cabeçalho */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly; /* Distribui igualmente os itens de navegação */
+    padding: 0;
+    margin: 0;
+    gap: 150px; /* Aumenta o espaço horizontal entre os itens */
+}
+
+nav ul li {
+    display: flex;
+    align-items: center; /* Alinha as imagens e textos na mesma altura */
+    justify-content: center; /* Alinha o conteúdo do item ao centro */
+    width: 130%; /* Faz os itens de navegação ocuparem o máximo de largura possível */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Garante que os itens de menu fiquem no centro */
+    width: 150%; /* Ocupa a largura do espaço disponível no item */
+}
+
+nav ul li a:hover {
+    color: #777;
+}
+
+nav ul li img {
+    max-width: 30px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: auto;
+    margin-right: 0px; /* Dá um pequeno espaço entre as imagens e o texto */
+    transition: filter 0.3s ease; /* Adiciona uma transição suave */
+}
+
+nav ul li img:hover {
+    filter: sepia(80%); /* Adiciona um tom sépia */
+    }
+
+
+
+/* INTENSIVE */
+.hero12 {
+    font-family: 'TestFounders';
+    font-size: 1rem;
+    font-weight: light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0e2e1;
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+    margin-top: -50px;
+}
+.hero12 .content1 {
+    max-width: 100%;
+    font-family: 'TestFounders';
+    font-size: 1.1rem;
+    font-weight: medium;
+    
+}
+
+.hero1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0e2e1;
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+}
+
+.hero1 .content {
+    max-width: 45%;
+}
+
+.hero1 .content1 {
+    max-width: 100%;
+    
+}
+
+.hero1 h2 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    color: #15009e;
+    line-height: 1.2; /* Ajuste esse valor conforme necessário */
+}
+
+.hero1 p {
+    font-family: 'TestFounders';
+    margin: 15px 0;
+    font-size: 1.5rem;
+    font-weight: light;
+    color: #15009e;
+}
+
+
+.hero1 button {
+    font-family: 'TestFounders';
+    font-size: 1.8rem;
+    font-weight: light;
+    background-color: #15009e;;
+    color: #c1c5c7;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero1 button:hover {
+    background-color: #555;
+}
+
+.hero1 img {
+    max-width: 60%;
+    border-radius: 40px;
+}
+
+
+/* IGREJA 360 - Responsiva */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(images/background-sessao.png);
+    padding: 80px 40px 40px; /* Aumenta o padding superior para descer o conteúdo */
+    margin: -40px auto; 
+    border-radius: 40px;
+    width: calc(100% - 80px); 
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out; 
+    min-height: 600px;
+    margin-bottom: 30px;
+}
+
+
+
+/* Estado ativo: elementos visíveis */
+.hero.active {
+    opacity: 1;
+    transform: translateY(0); /* Retorna à posição original */
+}
+
+.hero .content {
+    max-width: 45%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-in-out;
+}
+
+.hero.active .content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero h2 {
+    font-size: 5rem;
+    font-weight: normal;
+    transition: font-size 0.5s ease; /* Transição para o tamanho do texto */
+}
+
+.hero p {
+    font-family: 'TestFounders';
+    margin: 15px 0;
+    font-size: 1.4rem;
+    font-weight: medium;
+    color: #898989;
+    text-shadow: none;
+}
+
+.hero button {
+    font-family: 'TestFounders';
+    font-size: 1.8rem;
+    font-weight: light;
+    text-align: center;
+    align-items: center;
+    background-color: #c1c5c7;
+    color: #898989;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #555;
+}
+
+.hero img {
+    max-width: 45%;
+    border-radius: 10px;
+    transform: translateX(-30px);
+    transition: all 0.8s ease-in-out;
+}
+
+.hero.active img {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Muda para coluna */
+        padding: 20px;
+        width: calc(100% - 40px); /* Ajusta a largura */
+    }
+
+    .hero .content {
+        max-width: 100%; /* Ocupa toda a largura */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .hero h2 {
+        font-size: 3rem; /* Reduz o tamanho do texto */
+    }
+
+    .hero p {
+        font-size: 1.5rem; /* Ajusta o tamanho do parágrafo */
+    }
+
+    .hero img {
+        max-width: 70%; /* Reduz a imagem */
+        margin: 20px 0; /* Adiciona espaçamento */
+    }
+
+    .hero button {
+        font-size: 1.5rem; /* Ajusta o tamanho do botão */
+        padding: 8px 16px; /* Reduz o padding */
+    }
+}
+
+/* Responsividade para dispositivos muito pequenos (celulares) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 15px;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem; /* Ainda menor para telas pequenas */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Texto compacto */
+    }
+
+    .hero img {
+        max-width: 90%; /* Imagem ajustada */
+    }
+
+    .hero button {
+        font-size: 1.2rem; /* Botões menores */
+        padding: 6px 12px;
+    }
+}
+
+
+/* CCV NETWORK */
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(images/background-sessao-2.png);
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+    opacity: 0; /* Inicialmente oculto para animação */
+    animation: fadeIn 1s forwards;
+}
+
+/* Animação de Fade-In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.section img {
+    max-width: 45%; /* Ajuste para desktop */
+    border-radius: 10px;
+    opacity: 0;
+    animation: slideIn 1s forwards;
+    transition: opacity 0.5s ease;
+}
+
+.section img.top-left-img {
+    animation-delay: 0.2s;
+}
+
+.section img.top-right-img {
+    animation-delay: 0.4s;
+}
+
+.section img.image-person {
+    animation-delay: 0.6s;
+}
+
+/* Animação de Slide-In */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.section .text {
+    font-family: 'TestFounders';
+    font-size: 1rem; /* Fonte ajustada para desktop */
+    font-weight: light;
+    max-width: 45%; 
+    background-color: #898989b5;
+    padding: 60px 40px;
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+    height: 620px;
+    opacity: 0;
+    animation: slideInText 1s 0.8s forwards;
+}
+
+/* Animação de Slide-In do Texto */
+@keyframes slideInText {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.section .botao-comum, .section .botao-comum1 {
+    font-family: 'TestFounders';
+    font-size: 1.8rem;
+    font-weight: light;
+    background-color: #c1c5c7;
+    color: #898989;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.section .botao-comum:hover, .section .botao-comum1:hover {
+    background-color: #555;
+}
+
+#ccvNetwork {
+    position: relative; /* Permite o posicionamento absoluto dentro da seção */
+}
+
+.top-left-img {
+    position: absolute;
+    top: 12px;
+    left: 45px;
+    max-width: 35px; /* Define a largura máxima */
+    max-height: 35px; /* Define a altura máxima */
+    height: auto; /* Mantém a proporção */
+    width: auto; /* Garante que as proporções sejam respeitadas */
+}
+
+.top-right-img {
+    position: absolute;
+    top: 7px;
+    right: 45px;
+    max-width: 35px; /* Define a largura máxima */
+    max-height: 35px; /* Define a altura máxima */
+    height: auto; /* Mantém a proporção */
+    width: auto; /* Garante que as proporções sejam respeitadas */
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column; /* Muda para coluna */
+        padding: 20px;
+        width: calc(100% - 40px); /* Ajusta a largura */
+        position: relative; /* Garante que as imagens fiquem dentro do contexto da seção */
+    }
+
+    .section img {
+        max-width: 80%; /* Mantém o ajuste das imagens menores */
+        margin: 20px auto; /* Aumenta o espaçamento superior */
+        position: relative; /* Mantém a posição relativa */
+        top: 20px; /* Faz a imagem descer */
+    }
+    
+
+    .section img.top-left-img {
+        position: absolute; /* Garante que fique no canto superior esquerdo */
+        top: 10px; /* Ajusta a distância do topo */
+        left: 20px; /* Ajusta a distância da esquerda */
+        max-width: 25px; /* Define um tamanho proporcional */
+        max-height: 25px; /* Garante que a altura seja proporcional */
+        height: auto; /* Mantém a proporção */
+        width: auto;
+    }
+
+    .section img.top-right-img {
+        position: absolute; /* Garante que fique no canto superior direito */
+        top: 10px; /* Ajusta a distância do topo */
+        right: 20px; /* Ajusta a distância da direita */
+        max-width: 55px; /* Define um tamanho proporcional */
+        max-height: 55px; /* Garante que a altura seja proporcional */
+        height: auto; /* Mantém a proporção */
+        width: auto;
+    }
+
+    .section .text {
+            font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+            padding: 20px; /* Reduz o espaçamento interno */
+            margin: 10px auto;
+            width: 90%; /* Ajusta para ocupar 90% da largura da tela */
+            max-width: 600px; /* Define um limite máximo para não exagerar */
+            height: auto; /* Altura automática, ajusta ao conteúdo */
+    }
+
+    .section .text p {
+        font-family: 'TestFounders';
+        font-size: 0.8rem;
+        font-weight: 800;
+    }
+    
+    .section .text h3 {
+        font-size: 1.4rem;
+        font-weight: medium;
+    }
+
+    .section .botao-comum, .section .botao-comum1 {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte dos botões */
+        padding: 10px; /* Ajusta o espaçamento interno */
+    }
+
+    .scroll-to-top {
+        display: none; /* Esconde o botão de rolar no layout móvel */
+    }
+}
+
+
+
+/* FORMAÇÃO */
+.section1 {
+    position: relative; /* Define o contêiner como referência */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(images/background-sessao-3.png);
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+}
+
+.section1 img {
+    max-width: 60%;
+    border-radius: 10px;
+}
+
+.section1 .text {
+    font-family: 'TestFounders';
+    font-size: 1rem;
+    font-weight: light;
+    max-width: 45%; /* Mantém a largura original */
+    background-color: #898989b5;
+    padding: 60px 40px;  /* Aumenta o padding superior e inferior */
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+    height: 620px; /* Adiciona uma altura fixa se necessário */
+}
+
+.section1 .text1 {
+
+    position: relative; /* Também pode ser usado se a seta estiver dentro deste contêiner */
+    max-width: 45%; /* Mantém a largura original */
+    padding: 60px 40px;  /* Aumenta o padding superior e inferior */
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+    height: 720px; /* Adiciona uma altura fixa se necessário */
+}
+
+.section1 .text1 p {
+    font-family: 'TestFounders';
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.section1 .text1 h3 {
+    font-size: 2.4rem;
+    font-weight: medium;
+}
+
+.section1 .botao-comum {
+    font-family: 'TestFounders';
+    font-size: 1.8rem;
+    font-weight: light;
+    background-color: #c1c5c7;
+    color: #898989;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.section1 .botao-comum:hover {
+    background-color: #555;
+}
+
+.section1 .botao-comum1 {
+    font-family: 'TestFounders';
+    justify-content: center; /* Centraliza o botão horizontalmente */
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: light;
+    background-color: #c1c5c7;
+    color: #898989;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.section1 .botao-comum1:hover {
+    background-color: #555;
+}
+
+.section1 h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.section1 p {
+    margin-top: 15px;
+}
+
+/* FORMAÇÃO */
+.sectionQuemSomos {
+    position: relative; /* Define o contêiner como referência */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(images/background-sessao-3.png);
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+}
+
+.sectionQuemSomos img {
+    max-width: 40%;
+    border-radius: 10px;
+}
+
+.sectionQuemSomos .text {
+    font-family: 'TestFounders';
+    font-size: 1rem;
+    font-weight: light;
+    max-width: 45%; /* Mantém a largura original */
+    background-color: #898989b5;
+    padding: 60px 40px;  /* Aumenta o padding superior e inferior */
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+    height: 620px; /* Adiciona uma altura fixa se necessário */
+}
+
+.sectionQuemSomos .text1 {
+
+    position: relative; /* Também pode ser usado se a seta estiver dentro deste contêiner */
+    max-width: 45%; /* Mantém a largura original */
+    padding: 60px 40px;  /* Aumenta o padding superior e inferior */
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+    height: 720px; /* Adiciona uma altura fixa se necessário */
+}
+
+.sectionQuemSomos .text1 p {
+    font-family: 'TestFounders';
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.sectionQuemSomos .text1 h3 {
+    font-size: 2.4rem;
+    font-weight: medium;
+}
+
+.sectionQuemSomos .botao-comum {
+    font-family: 'TestFounders';
+    font-size: 1.8rem;
+    font-weight: light;
+    background-color: #c1c5c7;
+    color: #898989;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sectionQuemSomos .botao-comum:hover {
+    background-color: #555;
+}
+
+.sectionQuemSomos .botao-comum1 {
+    font-family: 'TestFounders';
+    justify-content: center; /* Centraliza o botão horizontalmente */
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: light;
+    background-color: #c1c5c7;
+    color: #898989;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sectionQuemSomos .botao-comum1:hover {
+    background-color: #555;
+}
+
+.sectionQuemSomos h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.sectionQuemSomos p {
+    margin-top: 15px;
+}
+
+.SETA {
+    position: absolute; /* Permite o posicionamento personalizado */
+    bottom: -100px; /* Define a distância do canto inferior */
+    right: -80px; /* Define a distância do canto direito */
+    width: 300px; /* Ajusta o tamanho da seta */
+    height: auto; /* Mantém a proporção */
+}
+
+
+/* PADROZINÇÕES */
+#intensive {
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    align-items: center; /* Centraliza verticalmente */
+    background-image: url('images/intensive223.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 40px;
+    width: calc(100% - 80px);
+    height: 470px;
+    cursor: pointer;
+    position: relative;
+}
+
+#intensive .content {
+    text-align: left; /* Garante que o texto e botão fiquem alinhados à esquerda */
+    max-width: 500px; /* Define uma largura máxima para o conteúdo */
+}
+
+#intensive .video-container {
+    position: absolute; /* Permite reposicionar o vídeo */
+    right: 50px; /* Move o vídeo mais para a direita */
+    bottom: 35px; /* Desce o vídeo mais para baixo */
+    width: 400px; /* Aumenta a largura do vídeo */
+    height: 240px; /* Ajusta a altura proporcionalmente */
+}
+
+#intensive iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    border-radius: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+
+#formacoes {
+    position: relative; /* Permite o posicionamento absoluto dentro da seção */
+}
+
+.top-left-img {
+    font-size: 1rem;
+    font-weight: 800;
+    position: absolute;
+    top: 20px;
+    left: 45px;
+    max-width: 35px; /* Define a largura máxima */
+    max-height: 35px; /* Define a altura máxima */
+    height: auto; /* Mantém a proporção */
+    width: auto; /* Garante que as proporções sejam respeitadas */
+}
+
+.top-right-img {
+    font-size: 1rem;
+    font-weight: 800;
+    position: absolute;
+    top: 20px;
+    right: 85px;
+    max-width: 35px; /* Define a largura máxima */
+    max-height: 35px; /* Define a altura máxima */
+    height: auto; /* Mantém a proporção */
+    width: auto; /* Garante que as proporções sejam respeitadas */
+}
+
+    /* Estilo do botão */
+    .scroll-to-top {
+        font-family: 'TestFounders';
+        font-size: 1.5rem;
+        font-weight: 800;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #555;
+        border-radius: 50%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    /* Cor ao passar o mouse */
+    .scroll-to-top:hover {
+        background-color: #555;
+        color: white;
+        border-color: white;
+    }
+
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .scroll-to-top {
+            width: 40px;
+            height: 40px;
+        }
+
+        .scroll-to-top::before {
+            height: 16px;
+        }
+
+        .scroll-to-top::after {
+            width: 8px;
+            height: 8px;
+            border-width: 3px;
+        }
+    }
